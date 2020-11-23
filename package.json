@@ -1,0 +1,27 @@
+{
+  "name": "simple-mqtt-adapter",
+  "version": "1.0.0",
+  "description": "Creates a virtual device with configurable actions/events connected to a MQTT broker.",
+  "author": "Michael Kohler <me@michaelkohler.info>",
+  "main": "index.js",
+  "scripts": {
+    "build": "shasum --algorithm 256 manifest.json package.json *.js LICENSE README.md > SHA256SUMS && find node_modules \\( -type f -o -type l \\) -exec shasum --algorithm 256 {} \\; >> SHA256SUMS"
+  },
+  "homepage": "https://github.com/MichaelKohler/simple-mqtt-adapter",
+  "license": "MPL-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MichaelKohler/simple-mqtt-adapter.git"
+  },
+  "dependencies": {
+    "async-mqtt": "^2.6.1"
+  },
+  "files": [
+    "config.js",
+    "index.js",
+    "manifest.json",
+    "package.json",
+    "simple-mqtt-adapter.js",
+    "SHA256SUMS"
+  ]
+}

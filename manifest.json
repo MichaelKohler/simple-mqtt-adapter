@@ -1,0 +1,98 @@
+{
+  "author": "Michael Kohler",
+  "description": "Creates a virtual device with configurable actions/events connected to a MQTT broker.",
+  "gateway_specific_settings": {
+    "webthings": {
+      "exec": "{nodeLoader} {path}",
+      "primary_type": "adapter",
+      "strict_max_version": "*",
+      "strict_min_version": "0.10.0"
+    }
+  },
+  "homepage_url": "https://github.com/MichaelKohler/simple-mqtt-adapter",
+  "id": "simple-mqtt-adapter",
+  "license": "MPL-2.0",
+  "manifest_version": 1,
+  "name": "Simple MQTT Adapter",
+  "short_name": "MQTT Adapter",
+  "version": "1.0.0",
+  "options": {
+    "schema": {
+      "type": "object",
+      "required": [],
+      "properties": {
+        "mqttHost": {
+          "type": "string",
+          "title": "MQTT URL (example: mqtts://my.mqtt.com:1883)"
+        },
+        "mqttUsername": {
+          "type": "string",
+          "title": "MQTT Username"
+        },
+        "mqttPassword": {
+          "type": "string",
+          "title": "MQTT Password"
+        },
+        "actions": {
+          "type": "array",
+          "title": "A list of Actions",
+          "items": {
+            "type": "object",
+            "title": "Action",
+            "required": [
+              "name",
+              "title",
+              "topic",
+              "payload"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "title": "Name of the action to create"
+              },
+              "title": {
+                "type": "string",
+                "title": "Title of the action to create"
+              },
+              "topic": {
+                "type": "string",
+                "title": "MQTT Topic to publish to"
+              },
+              "payload": {
+                "type": "string",
+                "title": "Payload to attach to message"
+              }
+            }
+          }
+        },
+        "events": {
+          "type": "array",
+          "title": "A list of Events",
+          "items": {
+            "type": "object",
+            "title": "Event",
+            "required": [
+              "name",
+              "title",
+              "topic"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "title": "Name of the event to create"
+              },
+              "title": {
+                "type": "string",
+                "title": "Title of the event to create"
+              },
+              "topic": {
+                "type": "string",
+                "title": "MQTT Topic to subscribe to"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
