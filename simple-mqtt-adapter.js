@@ -67,7 +67,7 @@ class MQTTVirtualDevice extends Device {
 
 class SimpleMQTTAdapter extends Adapter {
   constructor(addonManager, manifest) {
-    super(addonManager, 'SimpleMQTTAdapter', manifest.id);
+    super(addonManager, 'SimpleMQTTAdapter', manifest.name);
     addonManager.addAdapter(this);
 
     this.create(manifest);
