@@ -15,7 +15,7 @@
   "manifest_version": 1,
   "name": "Simple MQTT Adapter",
   "short_name": "MQTT Adapter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "options": {
     "schema": {
       "type": "object",
