@@ -13,9 +13,9 @@
   "id": "simple-mqtt-adapter",
   "license": "MPL-2.0",
   "manifest_version": 1,
-  "name": "Simple MQTT Adapter",
-  "short_name": "MQTT Adapter",
-  "version": "1.0.2",
+  "name": "Simple MQTT",
+  "short_name": "MQTT",
+  "version": "1.0.3",
   "options": {
     "schema": {
       "type": "object",
