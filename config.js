@@ -6,8 +6,8 @@ module.exports = {
   load,
 };
 
-async function load(manifest) {
-  const database = new Database(manifest.name);
+async function load(manifestId) {
+  const database = new Database(manifestId);
   await database.open()
   const config = await database.loadConfig();
   return config;

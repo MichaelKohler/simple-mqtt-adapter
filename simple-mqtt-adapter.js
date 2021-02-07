@@ -9,6 +9,7 @@ const {
 const MQTT = require('async-mqtt');
 
 const config = require('./config');
+const manifest = require('./manifest.json');
 
 const DEVICE_ID = 'simple-mqtt-virtual';
 const DEVICE_NAME = 'MQTT Broker';
@@ -66,11 +67,11 @@ class MQTTVirtualDevice extends Device {
 }
 
 class SimpleMQTTAdapter extends Adapter {
-  constructor(addonManager, manifest) {
-    super(addonManager, 'SimpleMQTTAdapter', manifest.name);
+  constructor(addonManager) {
+    super(addonManager, 'SimpleMQTTAdapter', manifest.id);
     addonManager.addAdapter(this);
 
-    this.create(manifest);
+    this.create(manifest.id);
   }
 
   async create(manifest) {

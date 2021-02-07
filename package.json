@@ -1,6 +1,6 @@
 {
   "name": "simple-mqtt-adapter",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Creates a virtual device with configurable actions/events connected to a MQTT broker.",
   "author": "Michael Kohler <me@michaelkohler.info>",
   "main": "index.js",
