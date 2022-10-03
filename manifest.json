@@ -15,7 +15,7 @@
   "manifest_version": 1,
   "name": "Simple MQTT",
   "short_name": "MQTT",
-  "version": "1.0.3",
+  "version": "1.0.7",
   "options": {
     "schema": {
       "type": "object",
