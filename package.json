@@ -14,7 +14,7 @@
     "url": "https://github.com/MichaelKohler/simple-mqtt-adapter.git"
   },
   "dependencies": {
-    "async-mqtt": "^2.6.2"
+    "async-mqtt": "^2.6.3"
   },
   "files": [
     "config.js",
